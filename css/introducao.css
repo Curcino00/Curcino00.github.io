@@ -1,0 +1,66 @@
+.introducao {
+  max-width: 1200px; /* Defini um tamanho maximo para a tela */
+  padding: 40px 20px; /* Espaço do topo/lateral do site(discolar da borda) */
+  margin: 0 auto; /* Centralizei dentro do conteiner */
+  display: grid; /* Para definir um numeros de colunas */
+  grid-template-columns: 1fr 2fr; /* Quantidades de colunas */
+  gap: 100px; /* Espaço da img para o h1 */
+  align-items: center; /* justifiquei o h1 ao centro do conteiner*/
+}
+
+.introducao h1 {
+  font-size: 4.5rem; /* Tamanho da fonte */
+  line-height: 1.125; /* Altura da linha */
+  margin-bottom: 30px; /* Espaço de h1 para o p */
+  position: relative; /* Permite ajustar a posição do elemento em relação à sua posição normal.*/
+}
+
+.introducao h1::before {
+  /* Endica que estou selecionando um pseudo-elemento*/
+  content: ""; /* Define o conteúdo do pseudo-elemento como vazio */
+  display: block; /* Para tirar o efeita padrão*/
+  width: 130px; /* Define a largura*/
+  height: 100px; /* Define a altura */
+  background: url(../img/decoração.svg) no-repeat center; /*  Define a imagem de fundo do pseudo-elemento*/
+  position: absolute; /* Define a posição do pseudo-elemento como absoluta, em relação ao seu primeiro ancestral h1*/
+  top: -15px; /* Posição superior acima da borda superior do elemento pai*/
+  left: -40px; /* Posição esquerda squerda da borda esquerda do elemento pai*/
+  z-index: -1; /* Colocando-o abaixo do conteúdo do elemento pai.*/
+}
+
+.introducao p {
+  font-size: 1.5rem; /* Tamanho da fonte */
+  color: #525252; /* Cor da fonte */
+}
+
+@media (max-width: 1000px) {
+  /* Responsivo */
+  .introducao h1 {
+    font-size: 3rem; /* Tamanho da fonte */
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr; /* Espaço da img para o h1 */
+    gap: 40px; /* espaço da img para h1 */
+  }
+  .introducao h1 {
+    font-size: 2rem; /* Tamanho da fonte */
+  }
+  .introducao h1::before {
+    /* Endica que estou selecionando um pseudo-elemento */
+    width: 30px; /* Define a largura */
+    height: 10px; /* Define a altura*/
+    left: 0px; /* Define a posição horizontal, partir da borda esquerda */
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao {
+    grid-template-columns: 1fr; /* Defini uma coluna */
+  }
+  .introducao img {
+    display: none; /* Retirei a img */
+  }
+}

@@ -1,0 +1,157 @@
+.formacao {
+  background: #141414; /* Cor de fundo*/
+  color: #ffffff; /* Cor */
+}
+
+.formacao-container {
+  max-width: 1200px; /* Defini um tamanho maximo para a tela */
+  padding: 120px 20px; /* Espaço do topo/lateral do site(discolar da borda) */
+  margin: 0 auto; /* Centralizei dentro do conteiner */
+  display: grid; /* Para definir um numeros de colunas */
+  grid-template-columns: 1fr 2fr; /* Quantidades de colunas */
+  gap: 100px; /* Espaço da img para o h1 */
+  position: relative;
+}
+
+.formacao-container::after {
+  /* Defini um pseudo elemento */
+  content: ""; /* Conteudo vazio*/
+  display: block; /* Para fazer alteração*/
+  width: 130px; /* Define a largura */
+  height: 100px; /* Define a Altgura */
+  background: url("../img/decoração.svg") no-repeat center; /* img do pseudo*/
+  position: absolute;
+  bottom: -50px;
+  left: -20px;
+}
+
+.formacao .subtitulo {
+  color: #000000; /* Defini uma cor*/
+  max-width: 5ch; /* Defini com caracteres (letras) */
+}
+
+.formacao-texto {
+  font-size: 1.5rem; /* Tamamho da fonte */
+  line-height: 1.33; /* Altura da linha */
+  max-width: 40ch; /* Defini o tamanho da tela com caracterer */
+  margin-bottom: 60px; /* Espaço entreo o Proximo topico(linha de baixo) */
+  color: #a3a3a3; /* Defini uma cor */
+}
+
+.formacao-texto strong {
+  color: #ffffff; /* Defini uma cor */
+}
+
+.faculdade-lista {
+  display: flex; /* Defini para fazer alteração */
+  flex-wrap: wrap; /* Adiciona quebras caso a tela diminua */
+  gap: 20px; /* Espaço entre os elementos */
+  margin-bottom: 60px; /* Espaço entreo o Proximo topico(linha de baixo) */
+}
+
+.faculdade {
+  flex: 1; /* Deve ocupar todo o espaço disponível dentro desse contêiner ao longo do eixo principal */
+  background: #000000; /* Cor de fundo */
+  padding: 20px; /* Espaço entre o elemento e o background */
+  border-radius: 4px; /* Arredondar os cantos */
+  display: flex; /* Defini para fazer alteração */
+  flex-direction: column;
+}
+
+.faculdade-tipo {
+  font-size: 0.875rem; /* Tamanho da fonte */
+  text-transform: uppercase; /* Defini as letras como  maiusculas */
+  color: #a3a3a3; /* Defini uma cor*/
+  margin-bottom: 30px; /* Espaço entreo o Proximo topico(linha de baixo) */
+}
+
+.faculdade-curso {
+  font-size: 1.125rem; /* Tamamho da fonte */
+  line-height: 1.4; /* Altura da linha */
+  margin-bottom: 40px; /* Espaço entreo o Proximo topico(linha de baixo) */
+  position: relative; /* Define o contêiner como o referencial */
+}
+
+.faculdade-curso::before {
+  /* Defini um pseudo elemento ( retangulo) */
+  content: ""; /* Conteudo vazio*/
+  display: block; /* Para fazer alteração*/
+  width: 4px; /* Define a largura */
+  height: 20px; /* Define a altura*/
+  background: linear-gradient(#7d272a, #c8797e); /* Defini uma cor */
+  position: absolute; /* Remove o elemento do fluxo normal */
+  left: -24px; /* espaço para esqueda do background */
+}
+
+.faculdade-instituicao {
+  font-size: 1.125rem; /* Tamamho da fonte */
+  color: #a3a3a3; /* Defini uma cor */
+}
+
+.cursos {
+  margin-bottom: 60px; /* Espaço entreo o Proximo topico(linha de baixo) */
+}
+
+.formacao-extra h3 {
+  font-size: 0.875rem; /* Tamamho da fonte */
+  line-height: 1.4; /* Altura da linha */
+  color: #8f8f8f; /* Defini uma cor */
+  text-transform: uppercase; /* Defini as letras como  maiusculas */
+  margin-bottom: 30px; /* espaço entre os elementos */
+  position: relative; /* Define o contêiner como o referencial */
+}
+
+.formacao-extra h3::before {
+  /* Defini um pseudo elemento (icones)*/
+  display: block; /* Para fazer alteração*/
+  content: ""; /* Conteudo vazio*/
+  width: 24px; /* Define a largura */
+  height: 24px; /* Define a Altura */
+  position: absolute; /* Define o contêiner como o referencial */
+  left: -36px; /* Espaço para esqueda do do texto */
+  top: -4px; /* Pra cima do texto */
+}
+
+.cursos h3::before {
+  /* Icone*/
+  background: url(../img/livro.svg) no-repeat center center;
+}
+
+.idiomas h3::before {
+  /* Icone */
+  background: url(../img/idioma.svg) no-repeat center center;
+}
+
+.formacao-extra li {
+  font-size: 1.125rem; /* Tamanho da fonte */
+  line-height: 1.1; /* Altura da linha */
+  margin-bottom: 20px; /* Espaço entre os texto */
+}
+
+.formacao-extra span {
+  color: #8f8f8f; /* Defini uma cor */
+}
+
+.cursos li {
+  display: flex; /* Defini para fazer alteração */
+  justify-content: space-between; /* Purrando-os para as extremidades mais distantes do contêiner*/
+}
+
+@media (max-width: 800px) {
+  /* Responsivo */
+  .formacao-container {
+    grid-template-columns: 1fr; /* Defini uma coluna */
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao .subtitulo {
+    color: #ffffff; /* Defini uma cor */
+  }
+  .formacao-texto {
+    font-size: 1.25rem; /* Tamanho da fonte */
+  }
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}

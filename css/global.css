@@ -1,0 +1,40 @@
+body {
+  font-family: "Fira Sans", Arial, sans-serif; /* Defini a fonte do site */
+  margin: 0px; /* Tirei o espaço padrão */
+  color: #141414; /* Cor da fonte */
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px; /* Tirei o espoço padrão */
+}
+
+ul {
+  margin: 0px; /* Tirei o espaço padrão(da logo para ul) */
+  padding: 0px; /* Tirei o espaço padrão(colou no canto esquerto do body) */
+  list-style: none; /* Tirei a bolinha padrão da ul*/
+}
+
+img {
+  max-width: 100%; /* Para ñ cresce alem do seu tamanho */
+  height: auto; /* Para não esmagar a img */
+  display: block; /* Alterando o comportamento padrão */
+}
+
+.subtitulo {
+  font-size: 8rem; /* Tamanho da fonte */
+  line-height: 1; /* Altura de linha */
+  text-transform: uppercase; /* letras maiúsculas*/
+  word-break: break-all; /* Adicionei quebras na palavra */
+  max-width: 4ch; /* Para as quebras do texte for de 4 caracteres */
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem; /* Tamanho da fonte */
+    text-transform: capitaliza; /* Apenas primeira letra maiuscula */
+    max-width: initial !important;
+  }
+}

@@ -1,0 +1,108 @@
+.experiencia {
+  max-width: 1200px; /* Defini um tamanho maximo para a tela */
+  padding: 40px 20px; /* Espaço do topo/lateral do site(discolar da borda) */
+  margin: 0 auto; /* Centralizei dentro do conteiner */
+  display: grid; /* Para definir um numeros de colunas */
+  grid-template-columns: 1fr 2fr; /* Quantidades de colunas */
+  gap: 100px; /* Espaço da img para o h1 */
+}
+
+.experiencia .subtitulo {
+  color: #e0e0e0;
+}
+
+.experiencia-texto {
+  font-size: 1.5rem; /* Tamanho da fonte */
+  line-height: 1.33; /* Altura da linha */
+  max-width: 40ch; /* Defini o tamanho da tela com caracterer*/
+  margin-bottom: 60px; /* Espaço do proximo topico */
+  color: #525252; /* Defini uma cor */
+}
+
+.experiencia-texto strong {
+  color: #141414; /* Defini uma cor */
+}
+
+.empresa {
+  display: grid; /* Para definir um numeros de colunas */
+  grid-template-columns: 1fr 1fr; /* Numeros de colunas */
+  background: #f5f5f5; /* Cor de fundo*/
+  padding: 20px; /* Espoço para discolar o texto */
+  margin-bottom: 20px; /* Espaço entre os itens */
+  border-radius: 4px; /* Arredondar os cantos */
+  gap: 10px 20px; /*espaço entre os grid e as colunas */
+  position: relative; /* Define o contêiner como o referencial */
+}
+.empresa::before {
+  /* Defini um pseudo elemento */
+  content: ""; /* Conteudo vazio*/
+  display: block; /* Para fazer alteração*/
+  width: 4px; /* Define a largura */
+  height: 20px; /* Define a altura*/
+  background: linear-gradient(#7d272a, #c8797e); /* Defini uma cor */
+  position: absolute; /* Remove o elemento do fluxo normal */
+  top: 20px; /* Espaço para baixo do top */
+  left: -4px; /* espaço para esqueda do background */
+}
+
+.empresa-ano {
+  position: absolute; /* Remove o elemento do fluxo normal */
+  top: 22px; /* Espaço do topo */
+  left: -100px; /* espaco pra esquerda do background*/
+  text-align: right; /* Alinhado à direita*/
+  width: 80px; /* Define a largura */
+  color: #525252; /* Defini uma cor */
+  font-size: 0.875rem; /* Tamanho da fonte */
+}
+
+.empresa-titulo {
+  font-size: 1.125rem; /* Tamanho da fonte*/
+  line-height: 1.1; /* Altura da linha */
+  font-weight: bold; /* Defini  peso da fonte (negrito) */
+}
+
+.empresa-texto {
+  font-size: 0.875rem; /* Tamanho da fonte */
+  line-height: 1.4; /* Altura da linha */
+  color: #525252; /* Defini uma cor */
+}
+
+.empresa-habilidades {
+  display: flex; /* Defini para fazer alteração */
+  flex-wrap: wrap; /* Adiciona quebras caso a tela diminua */
+  gap: 10px; /* Espaço entre os elementos */
+  align-content: start; /* Alinha o conteúdo, empurrando os elementos para a extremidade esquerda*/
+}
+
+.empresa-habilidades li {
+  font-size: 0.875rem; /* Tamanho da fonte*/
+  line-height: 1.4; /* Altura da linha */
+  background: #ffffff; /* Cor de fundo */
+  border-radius: 4px; /* Arredondar os cantos */
+}
+
+@media (max-width: 800px) {
+  /* Responsivo */
+  .experiencia {
+    grid-template-columns: 1fr; /* Defini o numeros de colunas */
+    gap: 40px; /* Espaço de h2 para os outros elementos */
+  }
+  .experiencia .subtitulo {
+    color: #141414;
+  }
+  .experiencia-texto {
+    font-size: 1.25rem;
+  }
+  .empresa-ano {
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+}
